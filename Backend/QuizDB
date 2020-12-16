@@ -1,0 +1,334 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.1
+-- Dumped by pg_dump version 13.1
+
+-- Started on 2020-12-16 22:33:51
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3142 (class 0 OID 16610)
+-- Dependencies: 207
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+
+
+--
+-- TOC entry 3144 (class 0 OID 16620)
+-- Dependencies: 209
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+
+
+--
+-- TOC entry 3140 (class 0 OID 16602)
+-- Dependencies: 205
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.auth_permission VALUES (1, 'Can add log entry', 1, 'add_logentry');
+INSERT INTO public.auth_permission VALUES (2, 'Can change log entry', 1, 'change_logentry');
+INSERT INTO public.auth_permission VALUES (3, 'Can delete log entry', 1, 'delete_logentry');
+INSERT INTO public.auth_permission VALUES (4, 'Can view log entry', 1, 'view_logentry');
+INSERT INTO public.auth_permission VALUES (5, 'Can add permission', 2, 'add_permission');
+INSERT INTO public.auth_permission VALUES (6, 'Can change permission', 2, 'change_permission');
+INSERT INTO public.auth_permission VALUES (7, 'Can delete permission', 2, 'delete_permission');
+INSERT INTO public.auth_permission VALUES (8, 'Can view permission', 2, 'view_permission');
+INSERT INTO public.auth_permission VALUES (9, 'Can add group', 3, 'add_group');
+INSERT INTO public.auth_permission VALUES (10, 'Can change group', 3, 'change_group');
+INSERT INTO public.auth_permission VALUES (11, 'Can delete group', 3, 'delete_group');
+INSERT INTO public.auth_permission VALUES (12, 'Can view group', 3, 'view_group');
+INSERT INTO public.auth_permission VALUES (13, 'Can add user', 4, 'add_user');
+INSERT INTO public.auth_permission VALUES (14, 'Can change user', 4, 'change_user');
+INSERT INTO public.auth_permission VALUES (15, 'Can delete user', 4, 'delete_user');
+INSERT INTO public.auth_permission VALUES (16, 'Can view user', 4, 'view_user');
+INSERT INTO public.auth_permission VALUES (17, 'Can add content type', 5, 'add_contenttype');
+INSERT INTO public.auth_permission VALUES (18, 'Can change content type', 5, 'change_contenttype');
+INSERT INTO public.auth_permission VALUES (19, 'Can delete content type', 5, 'delete_contenttype');
+INSERT INTO public.auth_permission VALUES (20, 'Can view content type', 5, 'view_contenttype');
+INSERT INTO public.auth_permission VALUES (21, 'Can add session', 6, 'add_session');
+INSERT INTO public.auth_permission VALUES (22, 'Can change session', 6, 'change_session');
+INSERT INTO public.auth_permission VALUES (23, 'Can delete session', 6, 'delete_session');
+INSERT INTO public.auth_permission VALUES (24, 'Can view session', 6, 'view_session');
+INSERT INTO public.auth_permission VALUES (25, 'Can add quiz', 7, 'add_quiz');
+INSERT INTO public.auth_permission VALUES (26, 'Can change quiz', 7, 'change_quiz');
+INSERT INTO public.auth_permission VALUES (27, 'Can delete quiz', 7, 'delete_quiz');
+INSERT INTO public.auth_permission VALUES (28, 'Can view quiz', 7, 'view_quiz');
+INSERT INTO public.auth_permission VALUES (29, 'Can add question', 8, 'add_question');
+INSERT INTO public.auth_permission VALUES (30, 'Can change question', 8, 'change_question');
+INSERT INTO public.auth_permission VALUES (31, 'Can delete question', 8, 'delete_question');
+INSERT INTO public.auth_permission VALUES (32, 'Can view question', 8, 'view_question');
+INSERT INTO public.auth_permission VALUES (33, 'Can add answer', 9, 'add_answer');
+INSERT INTO public.auth_permission VALUES (34, 'Can change answer', 9, 'change_answer');
+INSERT INTO public.auth_permission VALUES (35, 'Can delete answer', 9, 'delete_answer');
+INSERT INTO public.auth_permission VALUES (36, 'Can view answer', 9, 'view_answer');
+
+
+--
+-- TOC entry 3146 (class 0 OID 16628)
+-- Dependencies: 211
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.auth_user VALUES (1, 'pbkdf2_sha256$216000$LAat9h2mGiJm$LXiI0iOx2Ur0F1SwjF39Czi0ZqvJPRpbZ61KHNQoK8c=', '2020-12-15 20:12:51+01', true, 'jowah', 'Johannes', 'Wahl', 'jowahl97@gmail.com', true, true, '2020-12-15 20:12:34+01');
+
+
+--
+-- TOC entry 3148 (class 0 OID 16638)
+-- Dependencies: 213
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+
+
+--
+-- TOC entry 3150 (class 0 OID 16646)
+-- Dependencies: 215
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+
+
+--
+-- TOC entry 3152 (class 0 OID 16706)
+-- Dependencies: 217
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.django_admin_log VALUES (1, '2020-12-15 22:15:18.996613+01', '1', 'Testquiz', 1, '[{"added": {}}]', 7, 1);
+INSERT INTO public.django_admin_log VALUES (2, '2020-12-15 22:16:03.018468+01', '1', 'Testfrage', 1, '[{"added": {}}, {"added": {"name": "answer", "object": "A"}}, {"added": {"name": "answer", "object": "B"}}, {"added": {"name": "answer", "object": "C"}}, {"added": {"name": "answer", "object": "D"}}]', 8, 1);
+INSERT INTO public.django_admin_log VALUES (3, '2020-12-15 22:17:54.937168+01', '1', 'jowah', 2, '[{"changed": {"fields": ["First name", "Last name"]}}]', 4, 1);
+INSERT INTO public.django_admin_log VALUES (5, '2020-12-16 22:24:05.905809+01', '4', 'D', 3, '', 9, 1);
+INSERT INTO public.django_admin_log VALUES (6, '2020-12-16 22:24:08.468116+01', '3', 'C', 3, '', 9, 1);
+INSERT INTO public.django_admin_log VALUES (7, '2020-12-16 22:24:10.808886+01', '2', 'B', 3, '', 9, 1);
+INSERT INTO public.django_admin_log VALUES (8, '2020-12-16 22:24:13.044521+01', '1', 'A', 3, '', 9, 1);
+INSERT INTO public.django_admin_log VALUES (9, '2020-12-16 22:24:18.704572+01', '1', 'Testfrage', 3, '', 8, 1);
+INSERT INTO public.django_admin_log VALUES (10, '2020-12-16 22:24:22.5578+01', '1', 'Testquiz', 3, '', 7, 1);
+INSERT INTO public.django_admin_log VALUES (11, '2020-12-16 22:24:35.30089+01', '2', 'Quiz', 1, '[{"added": {}}]', 7, 1);
+INSERT INTO public.django_admin_log VALUES (12, '2020-12-16 22:28:46.607958+01', '2', 'Wie hieß der Mörder von Thronfolger Franz Ferdinand?', 1, '[{"added": {}}, {"added": {"name": "answer", "object": "Gavrilo Princip"}}, {"added": {"name": "answer", "object": "Pavrilo Grincip"}}, {"added": {"name": "answer", "object": "Lee Harvey Oswald"}}]', 8, 1);
+INSERT INTO public.django_admin_log VALUES (13, '2020-12-16 22:30:03.599431+01', '3', 'Welches Land ist nach dem italienischen oder spanischen Wort "Silber" benannt?', 1, '[{"added": {}}, {"added": {"name": "answer", "object": "Argentinien"}}, {"added": {"name": "answer", "object": "Brasilien"}}, {"added": {"name": "answer", "object": "Indien"}}, {"added": {"name": "answer", "object": "S\u00fcdafrika"}}]', 8, 1);
+INSERT INTO public.django_admin_log VALUES (14, '2020-12-16 22:30:10.291042+01', '2', 'Wie hieß der Mörder von Thronfolger Franz Ferdinand?', 2, '[{"changed": {"name": "answer", "object": "Gavrilo Princip", "fields": ["Correct"]}}]', 8, 1);
+INSERT INTO public.django_admin_log VALUES (15, '2020-12-16 22:30:47.671091+01', '4', 'Was ist schwerer - ein Golf- oder ein Tennisball?', 1, '[{"added": {}}, {"added": {"name": "answer", "object": "Tennisball"}}, {"added": {"name": "answer", "object": "Golfball"}}]', 8, 1);
+
+
+--
+-- TOC entry 3138 (class 0 OID 16592)
+-- Dependencies: 203
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.django_content_type VALUES (1, 'admin', 'logentry');
+INSERT INTO public.django_content_type VALUES (2, 'auth', 'permission');
+INSERT INTO public.django_content_type VALUES (3, 'auth', 'group');
+INSERT INTO public.django_content_type VALUES (4, 'auth', 'user');
+INSERT INTO public.django_content_type VALUES (5, 'contenttypes', 'contenttype');
+INSERT INTO public.django_content_type VALUES (6, 'sessions', 'session');
+INSERT INTO public.django_content_type VALUES (7, 'quizzes', 'quiz');
+INSERT INTO public.django_content_type VALUES (8, 'quizzes', 'question');
+INSERT INTO public.django_content_type VALUES (9, 'quizzes', 'answer');
+
+
+--
+-- TOC entry 3136 (class 0 OID 16581)
+-- Dependencies: 201
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.django_migrations VALUES (1, 'contenttypes', '0001_initial', '2020-12-15 20:10:58.301675+01');
+INSERT INTO public.django_migrations VALUES (2, 'auth', '0001_initial', '2020-12-15 20:10:58.3819+01');
+INSERT INTO public.django_migrations VALUES (3, 'admin', '0001_initial', '2020-12-15 20:10:58.511017+01');
+INSERT INTO public.django_migrations VALUES (4, 'admin', '0002_logentry_remove_auto_add', '2020-12-15 20:10:58.533037+01');
+INSERT INTO public.django_migrations VALUES (5, 'admin', '0003_logentry_add_action_flag_choices', '2020-12-15 20:10:58.539043+01');
+INSERT INTO public.django_migrations VALUES (6, 'contenttypes', '0002_remove_content_type_name', '2020-12-15 20:10:58.555057+01');
+INSERT INTO public.django_migrations VALUES (7, 'auth', '0002_alter_permission_name_max_length', '2020-12-15 20:10:58.561063+01');
+INSERT INTO public.django_migrations VALUES (8, 'auth', '0003_alter_user_email_max_length', '2020-12-15 20:10:58.56907+01');
+INSERT INTO public.django_migrations VALUES (9, 'auth', '0004_alter_user_username_opts', '2020-12-15 20:10:58.575076+01');
+INSERT INTO public.django_migrations VALUES (10, 'auth', '0005_alter_user_last_login_null', '2020-12-15 20:10:58.582081+01');
+INSERT INTO public.django_migrations VALUES (11, 'auth', '0006_require_contenttypes_0002', '2020-12-15 20:10:58.583082+01');
+INSERT INTO public.django_migrations VALUES (12, 'auth', '0007_alter_validators_add_error_messages', '2020-12-15 20:10:58.589089+01');
+INSERT INTO public.django_migrations VALUES (13, 'auth', '0008_alter_user_username_max_length', '2020-12-15 20:10:58.608105+01');
+INSERT INTO public.django_migrations VALUES (14, 'auth', '0009_alter_user_last_name_max_length', '2020-12-15 20:10:58.615112+01');
+INSERT INTO public.django_migrations VALUES (15, 'auth', '0010_alter_group_name_max_length', '2020-12-15 20:10:58.625121+01');
+INSERT INTO public.django_migrations VALUES (16, 'auth', '0011_update_proxy_permissions', '2020-12-15 20:10:58.631149+01');
+INSERT INTO public.django_migrations VALUES (17, 'auth', '0012_alter_user_first_name_max_length', '2020-12-15 20:10:58.638133+01');
+INSERT INTO public.django_migrations VALUES (18, 'quizzes', '0001_initial', '2020-12-15 20:10:58.682173+01');
+INSERT INTO public.django_migrations VALUES (19, 'quizzes', '0002_auto_20201215_0712', '2020-12-15 20:10:58.752237+01');
+INSERT INTO public.django_migrations VALUES (20, 'quizzes', '0003_remove_quiz_total_questions', '2020-12-15 20:10:58.760244+01');
+INSERT INTO public.django_migrations VALUES (21, 'quizzes', '0004_auto_20201215_2200', '2020-12-15 20:10:58.774257+01');
+INSERT INTO public.django_migrations VALUES (22, 'sessions', '0001_initial', '2020-12-15 20:10:58.794275+01');
+
+
+--
+-- TOC entry 3159 (class 0 OID 16794)
+-- Dependencies: 224
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.django_session VALUES ('ugk8s6o2673dorx6lf38vjl5f7w1mu3d', '.eJxVjEsOwiAUAO_C2hD-7XPpvmcgPB5I1UBS2pXx7oakC93OTObNfDj24o-eNr8SuzLJLr8MQ3ymOgQ9Qr03HlvdtxX5SPhpO18apdftbP8GJfQytnO2RjhMWcKUgGTQQoOiyYKWFimIlAU4pdCQInCYo9UZncPZxQyGfb7XEjfh:1kpFkh:Sclvz8wcHi0jBb65jHubzOIX8fz5zH1vq3umWUJlt2A', '2020-12-29 20:12:51.231824+01');
+
+
+--
+-- TOC entry 3158 (class 0 OID 16755)
+-- Dependencies: 223
+-- Data for Name: quizzes_answer; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.quizzes_answer VALUES (6, 'Pavrilo Grincip', false, 2);
+INSERT INTO public.quizzes_answer VALUES (7, 'Lee Harvey Oswald', false, 2);
+INSERT INTO public.quizzes_answer VALUES (8, 'Argentinien', true, 3);
+INSERT INTO public.quizzes_answer VALUES (9, 'Brasilien', false, 3);
+INSERT INTO public.quizzes_answer VALUES (10, 'Indien', false, 3);
+INSERT INTO public.quizzes_answer VALUES (11, 'Südafrika', false, 3);
+INSERT INTO public.quizzes_answer VALUES (5, 'Gavrilo Princip', true, 2);
+INSERT INTO public.quizzes_answer VALUES (12, 'Tennisball', true, 4);
+INSERT INTO public.quizzes_answer VALUES (13, 'Golfball', false, 4);
+
+
+--
+-- TOC entry 3156 (class 0 OID 16747)
+-- Dependencies: 221
+-- Data for Name: quizzes_question; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.quizzes_question VALUES (3, 'Welches Land ist nach dem italienischen oder spanischen Wort "Silber" benannt?', 2);
+INSERT INTO public.quizzes_question VALUES (2, 'Wie hieß der Mörder von Thronfolger Franz Ferdinand?', 2);
+INSERT INTO public.quizzes_question VALUES (4, 'Was ist schwerer - ein Golf- oder ein Tennisball?', 2);
+
+
+--
+-- TOC entry 3154 (class 0 OID 16739)
+-- Dependencies: 219
+-- Data for Name: quizzes_quiz; Type: TABLE DATA; Schema: public; Owner: quizappuser
+--
+
+INSERT INTO public.quizzes_quiz VALUES (2, 'Quiz', 0, '2020-12-16 22:24:35.30089+01', 1);
+
+
+--
+-- TOC entry 3177 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+
+
+--
+-- TOC entry 3178 (class 0 OID 0)
+-- Dependencies: 208
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3179 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 36, true);
+
+
+--
+-- TOC entry 3180 (class 0 OID 0)
+-- Dependencies: 212
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+
+
+--
+-- TOC entry 3181 (class 0 OID 0)
+-- Dependencies: 210
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
+
+
+--
+-- TOC entry 3182 (class 0 OID 0)
+-- Dependencies: 214
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3183 (class 0 OID 0)
+-- Dependencies: 216
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 15, true);
+
+
+--
+-- TOC entry 3184 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 9, true);
+
+
+--
+-- TOC entry 3185 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 22, true);
+
+
+--
+-- TOC entry 3186 (class 0 OID 0)
+-- Dependencies: 222
+-- Name: quizzes_answer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.quizzes_answer_id_seq', 13, true);
+
+
+--
+-- TOC entry 3187 (class 0 OID 0)
+-- Dependencies: 220
+-- Name: quizzes_question_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.quizzes_question_id_seq', 4, true);
+
+
+--
+-- TOC entry 3188 (class 0 OID 0)
+-- Dependencies: 218
+-- Name: quizzes_quiz_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quizappuser
+--
+
+SELECT pg_catalog.setval('public.quizzes_quiz_id_seq', 2, true);
+
+
+-- Completed on 2020-12-16 22:33:51
+
+--
+-- PostgreSQL database dump complete
+--
+
