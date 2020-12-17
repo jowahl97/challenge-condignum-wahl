@@ -14,5 +14,6 @@ How to setup:
     - python manage.py createsuperuser (um Zugriff auf die Adminpage der API zu erhalten)
     
 - Danach muss das Dumb-file (QuizDB) in der Datenbank eingespielt werden.
+- Eventuell muss noch der Connection String in quiz_api/settings.py Zeile 83 geändert werden.
 - Nun sollte die API mit: "python manage.py runserver" gestartet werden können
     
